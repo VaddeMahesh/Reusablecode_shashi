@@ -1,0 +1,167 @@
+<div class="wrapper d-flex align-items-stretch">
+    <nav id="sidebar">
+        <div class="p-4 pt-5">
+            <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(http://frontendfreecode.com/img/user.jpg);"></a>
+            <ul class="list-unstyled components mb-5">
+                <li class="dropdown">
+                    <a  class="dropdown-toggle"href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu"  >
+                        <li>
+                            <a href="#" data-target="#contentHome1">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#" data-target="#contentHome2">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#" data-target="#contentHome3">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li >
+
+                    <a href="#" data-target="#About">About</a>
+                </li>
+                <li >
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+
+                            <a href="#Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Page 1</a>
+                    <ul class="collapse list-unstyled" id="Submenu">
+                        <li>
+                            <a href="#">subPage</a>
+                        </li>
+                        <li>
+                            <a href="#">subPage</a>
+                        </li>
+
+
+                    </ul>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" data-target="#Portfolio">Portfolio</a>
+                </li>
+                <li>
+                    <a href="#" data-target="#Contact">Contact</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                    <i class="fa fa-bars"></i>
+                    <img src="../../assets/menu.png" style="width: 30px; height: 30px;">
+                    <span class="sr-only">Toggle Menu</span>
+                </button>
+                <button class="btn  d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa fa-bars">
+                        <img src="../../assets/dots.png" style="width: 30px; height: 30px;">
+                    </i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link"  href="#">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div id="contentHome1" class="content-section" style="display: none;">
+            <!-- Content for Home 1 -->
+          <app-swalalert></app-swalalert>
+        </div>
+
+        <div id="contentHome2" class="content-section" style="display: none;">
+            <!-- Content for Home 2 -->
+            <app-alert></app-alert>
+        </div>
+        <div id="Portfolio" class="content-section" style="display: none;" (click)="loadData()">
+            <!-- Content for Home 2 -->
+        <div class="card">
+
+<div class="loader-wrapper" *ngIf="isLoading">
+                <ngx-spinner bdColor="rgba(0,0,15,0.8)" size="default" color="#fff" type="ball-spin-clockwise" [fullScreen]="false">
+                  <p style="color: white">Loading...</p>
+                </ngx-spinner>
+              </div>
+
+              <div class="">
+
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">Name</th>
+        <th scope="col">email</th>
+        <th scope="col">gender</th>
+        <th scope="col">status</th>
+        <th cope="col">action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="rrr"*ngFor="let item of filteredEmployees let i = index">
+        <td>{{ item?.id }}</td>
+        <td>{{ item?.name }}</td>
+        <td>{{ item?.email }}</td>
+        <td>{{ item?.gender }}</td>
+        <td>{{ item?.status }}</td>
+        <td>
+
+         <!-- app.component.html -->
+
+   <button class="tooltip-button">Click me</button>
+
+
+
+        </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div></div></div>
+        <div id="contentHome3" class="content-section" style="display: none;" >
+            <!-- Content for Home 3 -->
+         <app-tabs></app-tabs>
+        </div>
+        <div id="Contact" class="content-section" style="display: none;" >
+            <!-- Content for Home 3 -->
+   <app-line-chart></app-line-chart>
+        </div>
+        <div id="About" class="content-section" style="display: none;" >
+            <!-- Content for Home 3 -->
+<h1>About Content</h1>
+<span>
+    Content is the information contained within communication media. This includes internet, cinema, television, radio, audio CDs, books, magazines, physical art, and live event content.
+</span>
+
+
+
+                  </div>
+
+
+
+        </div>
+    </div>

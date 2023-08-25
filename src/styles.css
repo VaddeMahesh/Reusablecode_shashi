@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
+
+cdk-overlay-container, .cdk-global-overlay-wrapper{
+  overflow-y: scroll !important;
+}
+/* styles.css or styles.scss */
+/* styles.css or styles.scss */
+
+/* Center the toast horizontally */
+.toast-top-center {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Customize the toast container */
+  .toast-top-center .toast-container {
+    width: 300px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Customize the toast title */
+  .toast-top-center .toast-title {
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+  /* Customize the toast message */
+  .toast-top-center .toast-message {
+    font-size: 14px;
+  }

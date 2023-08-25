@@ -1,0 +1,11 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item" *ngFor="let tabHeader of generateTabHeaders(); let i = index">
+    <a class="nav-link" [class.active]="i === 0" data-toggle="tab" [attr.href]="'#tab' + (i + 1)">{{ tabHeader }}</a>
+  </li>
+</ul>
+
+<div class="tab-content">
+  <div class="tab-pane fade" *ngFor="let _ of generateTabHeaders(); let i = index" [class.show]="i === 0" [class.active]="i === 0" [attr.id]="'tab' + (i + 1)">
+    Tab Content for Tab {{ i + 1 }}
+  </div>
+</div>
