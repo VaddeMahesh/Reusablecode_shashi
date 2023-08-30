@@ -50,7 +50,7 @@ types:any
   }
 
   successSwal(message: string,types:string) {
-    console.log("*************", message,types)
+
     this.communicationService.showSuccesss(message,types);
   }
 }

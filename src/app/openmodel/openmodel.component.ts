@@ -16,6 +16,8 @@ export class OpenmodelComponent implements OnInit {
 
   ngOnInit(): void {
     this.submittedData = this.ModeldataService.getData(); // Assign the array directly
+    console.log(" this.submittedData", this.submittedData);
+
 
   }
   openDialog(){

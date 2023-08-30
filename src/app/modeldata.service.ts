@@ -33,6 +33,7 @@ export class ModeldataService {
 
       const dialogRef: MatDialogRef<ModelsComponent> = this.dialog.open(Component, {
         width: 'auto',
+        height:'90%',
         backdropClass: 'my-custom-dialog-backdrop',
         data: data,
         disableClose: true
@@ -43,21 +44,6 @@ export class ModeldataService {
       });
     }
   }
-  openDialogtextmsg(): void {
-    if (!this.showModal) {
-      this.showModal = true; // Show the modal
 
-      const dialogRef: MatDialogRef<LineChartComponent> = this.dialog.open(LineChartComponent, {
-        width: 'auto',
-        backdropClass: 'my-custom-dialog-backdrop',
-        data: { message: 'Your text message here' }, // Pass your text message here
-        disableClose: true
-      });
-
-      dialogRef.afterClosed().subscribe(result => {
-        this.showModal = false; // Close the modal
-      });
-    }
-  }
 
 }

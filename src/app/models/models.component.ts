@@ -36,18 +36,9 @@ export class ModelsComponent implements OnInit {
     // convenience getter for easy access to form fields
     get f() { return this.addUserForm.controls; }
     submitUser(message: string,types:string) {
-      console.log("ewrewhrewgew");
-      console.log("Submitted:", this.submitted);
       this.submitted = true;
       if (this.addUserForm.valid)
       {
-
-
-
-
-        console.log(this.addUserForm.value);
-
-
         // Close the modal
         this.dialogRef.close();
         this.communicationService.showSuccess(message, types);

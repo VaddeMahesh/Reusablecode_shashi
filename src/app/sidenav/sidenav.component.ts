@@ -20,6 +20,12 @@ export class SidenavComponent implements OnInit {
   filteredEmployees: any[] = [];
   wriewrigewir: any;
   tooltipText = 'This is a tooltip!';
+  popoverMessage = 'Are you sure you want to perform this action?';
+  popoverTitle = 'Popover title';
+
+  confirmClicked = false;
+  cancelClicked = false;
+isSmallScreen: any;
 
   constructor(private apiService: ApiserviceService, private spinner: NgxSpinnerService,) { }
 
@@ -51,9 +57,20 @@ export class SidenavComponent implements OnInit {
 
 
     });
+    $(document).ready(function () {
+      $('[data-toggle="popover"]').popover();
+  });
+  }
+  activePopoverIndex: number = -1;
 
+  openPopover(index: number,event:any) {
+    event.stopPropagation();
+    this.activePopoverIndex = index;
   }
 
+  closePopover() {
+    this.activePopoverIndex = -1;
+  }
   loadData() {
     this.isLoading = true;
     this.spinner.show();

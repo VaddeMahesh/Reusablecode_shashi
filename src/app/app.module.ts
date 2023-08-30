@@ -31,6 +31,7 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { NgChartsModule } from 'ng2-charts';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { ConfirmationPopoverModule } from 'angular-confirmation-popover';
 @NgModule({
   declarations: [
     AppComponent,
@@ -69,11 +70,14 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 
     }), MatButtonModule,
     MatDialogModule,
-    MaterialmoduleModule
+    MaterialmoduleModule,
+    ConfirmationPopoverModule.forRoot({
+      confirmButtonType: 'danger', // set defaults here
+    }),
   ],
   providers: [ { provide: MAT_DIALOG_DATA, useValue: {} },
     { provide: MatDialogRef, useValue: {}, },
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent,SidenavComponent]
 })
 export class AppModule { }

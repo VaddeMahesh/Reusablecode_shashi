@@ -1,3 +1,5 @@
+<div class="container">
+
 
     <form [formGroup]="addUserForm" (ngSubmit)="submitUser(message.message,message.types)">
       <div class="form-group row">
@@ -89,7 +91,8 @@
 
 
       <div class="form-group text-center">
-        <button type="submit" class="btn btn-success btn-sm" >Add User</button>
+        <input type="submit" value="Add User"class="btn btn-success btn-sm" >
         <button type="reset" class="btn btn-secondary btn-sm ml-2" >reset</button>
       </div>
     </form>
+  </div>
